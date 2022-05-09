@@ -1,4 +1,4 @@
-import { Tabs as MantineTabs } from '@mantine/core';
+import { Group, Tabs as MantineTabs } from '@mantine/core';
 import { useState } from 'react';
 import { MarkdownTextArea } from '../MarkdownTextArea';
 import ReactMarkdown from 'react-markdown';
@@ -6,6 +6,7 @@ import RemarkGFM from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialOceanic } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { OpenFileButton } from '../OpenFileButton';
+import { ExportButton } from '../ExportButton';
 
 export function Tabs() {
   const [markdown, setMarkdown] = useState('');
@@ -48,7 +49,10 @@ export function Tabs() {
         </MantineTabs.Tab>
       </MantineTabs>
 
-      <OpenFileButton onFileRead={(text) => setMarkdown(text)} />
+      <Group>
+        <OpenFileButton onFileRead={(text) => setMarkdown(text)} />
+        <ExportButton markdown={markdown} />
+      </Group>
     </>
   );
 }
