@@ -29,6 +29,7 @@ export function OpenFileButton({ onFileRead }: OpenFileButtonProps) {
         hidden
         ref={inputRef}
         onChange={(e) => handleReadFile(e.target.files)}
+        accept=".md,text/plain"
       />
 
       <Button color="orange" my="md" onClick={handleOpenFile}>
