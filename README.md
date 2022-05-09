@@ -11,7 +11,7 @@
 
 ## 📕 About
 
-MKDview is a simple Markdown viewer built with NextJS.
+MKDview is a simple Markdown editor built with NextJS.
 
 ---
 
@@ -29,9 +29,11 @@ To develop this app, I used these technologies:
 ## ✨ Features
 
 - Responsivity
-- Visualization of Markdown
+- Preview of Markdown
 - Support for Github's Markdown flavor
 - Support for Syntax Highlight on Markdown preview
+- Import of local Markdown file
+- Export of edited Markdown
 
 ---
 
