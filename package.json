@@ -1,6 +1,6 @@
 {
   "name": "mkd-view",
-  "description": "A simple Markdown viewer.",
+  "description": "A simple Markdown editor.",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
