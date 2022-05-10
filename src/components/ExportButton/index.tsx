@@ -6,11 +6,15 @@ interface ExportButtonProps {
 
 export function ExportButton({ markdown }: ExportButtonProps) {
   function handleExportMarkdown() {
+    const date = new Date();
+    const fileName = `mkdview-${date.toLocaleDateString(
+      'pt-br'
+    )}-${date.toLocaleTimeString('pt-br', { hour12: false })}.md`;
     const anchor = document.createElement('a');
     const file = new Blob([markdown], { type: 'text/markdown' });
     const url = URL.createObjectURL(file);
     anchor.href = url;
-    anchor.download = 'mkdview-markdown.md';
+    anchor.download = fileName;
     document.body.appendChild(anchor);
     anchor.click();
     URL.revokeObjectURL(url);
